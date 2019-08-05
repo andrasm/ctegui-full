@@ -115,3 +115,22 @@ app.get("/algos", (req, res) => {
   console.log("serving request algos");
   res.send(algosTestData);
 });
+
+setInterval(() => {
+  for (let i = 0; i < algosTestData.length; i++) {
+    if (algosTestData[i].state === "Running") {
+      for (let j = 0; j < algosTestData[i].products.length; j++) {
+        const product = algosTestData[i].products[j];
+        if (product.state === "Running") {
+          if (Math.random() > 0.7) {
+            product.orders += 1;
+          }
+
+          if (Math.random() > 0.8) {
+            product.trades += 1;
+          }
+        }
+      }
+    }
+  }
+}, 1000);

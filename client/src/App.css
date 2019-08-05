@@ -7,17 +7,48 @@
 .algoInList {
   margin: 3px;
   padding: 2px;
-  display: list-item;
+  display: inline;
+}
+
+.algoName {
+  display: inline;
+}
+
+.algoState {
+  display: inline;
+  margin: 1px 20px 1px 20px;
+  text-transform: lowercase;
+}
+
+.algoButtons {
+  display: inline;
+  margin: 5px;
 }
 
 .productList {
-  margin: 1px 1px 1px 30px;
+  margin: 1px 1px 1px 40px;
+  display: block;
+  border-top: 2px solid white;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.productRic {
+  display: inline;
+  margin: 3px;
+}
+
+.productState {
+  display: inline;
+  margin: 5px;
+  text-transform: lowercase;
+}
+
+.productMessage {
+  display: inline;
+  margin: 3px;
+}
+
+.ordersAndTrades {
+  display: inline;
 }
 
 .App-header {
@@ -33,13 +64,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

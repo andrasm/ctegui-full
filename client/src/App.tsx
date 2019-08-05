@@ -122,10 +122,14 @@ const AlgoDisplay = (props: { algo: Algo; controller: AlgoController }) => {
     <div className="algoInList">
       <div className="algoName">{props.algo.name}</div>
       <div className="algoState">{props.algo.state}</div>
-      <div>
+      <div className="algoButtons">
         {buttons.map(args => {
           const [caption, action] = args;
-          return <button onClick={action}>{caption}</button>;
+          return (
+            <button className="algoButton" key={caption} onClick={action}>
+              {caption}
+            </button>
+          );
         })}
       </div>
 
@@ -158,6 +162,9 @@ const ProductDisplay = (props: {
       <div className="productRic">{props.product.ric}</div>
       <div className="productState">{props.product.state}</div>
       <div className="productMessage">{props.product.message}</div>
+      <div className="ordersAndTrades">
+        {props.product.orders} | {props.product.trades}{" "}
+      </div>
       <button onClick={() => buttonAction(props.algo, props.product.id)}>
         {buttonCaption}
       </button>
